@@ -64,3 +64,5 @@
 3. If you want to access the root of any node, look at noderootpod.yml for steps on how to do it, credit to [this blog](https://raesene.github.io/blog/2019/04/01/The-most-pointless-kubernetes-command-ever/). :)
 
 4. Additional credit to [this link](https://gist.github.com/s1061123/c0b857ec1a399c1e174531c0b826a81c), which basically explains how to set up a 3-node environment with KIND that has multus. I based my steps in this readme loosely on it, although it is out of date.
+	
+# Disclaimer: most yml here was not written by me, and can be traced back to k8snetworkplumbingwg. Thanks!
