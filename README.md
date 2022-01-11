@@ -2,7 +2,7 @@
 
 ## Easy Steps to Set Up a KinD Cluster With Multus and Whereabouts Installed
 
-1. Follow KinD's quickstart guide online. Once you are comfortable with starting/deleting a cluster, return here. Also I assume you know what Multus and Whereabouts are if you are here. If you're new to either, check out these links first... [Multus](https://github.com/k8snetworkplumbingwg/multus-cni) and [Whereabouts](https://github.com/k8snetworkplumbingwg/whereabouts).
+1. Follow KinD's [quickstart guide](https://kind.sigs.k8s.io/docs/user/quick-start/) online. Once you are comfortable with starting/deleting a cluster, return here. Also I assume you know what Multus and Whereabouts are if you are here. If you're new to either, check out these links first... [Multus](https://github.com/k8snetworkplumbingwg/multus-cni) and [Whereabouts](https://github.com/k8snetworkplumbingwg/whereabouts).
 
 2. Run the `kind-multus-whereabouts.sh` to setup the cluster.
    
