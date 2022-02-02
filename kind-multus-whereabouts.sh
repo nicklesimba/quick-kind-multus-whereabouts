@@ -13,3 +13,6 @@ kubectl apply \
     -f whereabouts-yml/whereabouts.cni.cncf.io_ippools.yml \
     -f whereabouts-yml/whereabouts.cni.cncf.io_overlappingrangeipreservations.yml \
     -f whereabouts-yml/ip-reconciler-job.yml
+
+# install macvlan
+kubectl apply -f cni-install.yml

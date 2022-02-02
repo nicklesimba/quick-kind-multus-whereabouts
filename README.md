@@ -26,10 +26,11 @@
    
    - if you get an error like... `error adding container to network "macvlan-conf": failed to find plugin "macvlan" in path"`
 
-   - ...then try applying this file (it was taken from multus-cni upstream repo under /e2e)
+   - ...then this step of the process failed:
 	
 		`$ kubectl apply -f cni-install.yml`
 
+   - try to look at multus-cni upstream repo under /e2e for a more up to date version of cni-install.yml, maybe.
 
 4. Check that Whereabouts is working correctly.
 
