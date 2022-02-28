@@ -1,4 +1,4 @@
-# this daemonset when applied with kubectl create will make pods that mount the host of each node.
+# this daemonset when ran with "kubectl apply" will make pods that mount the host of each node.
 
 # use the following command to get to the root of any node
 # kubectl exec -it noderootpod -- chroot /host

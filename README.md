@@ -1,10 +1,10 @@
-# Before asking for help, read this, it might help!!!
+# Getting Started
 
 ## Easy Steps to Set Up a KinD Cluster With Multus and Whereabouts Installed
 
-1. Follow KinD's [quickstart guide](https://kind.sigs.k8s.io/docs/user/quick-start/) online. Once you are comfortable with starting/deleting a cluster, return here. Also I assume you know what Multus and Whereabouts are if you are here. If you're new to either, check out these links first... [Multus](https://github.com/k8snetworkplumbingwg/multus-cni) and [Whereabouts](https://github.com/k8snetworkplumbingwg/whereabouts).
+1. Follow KinD's [quickstart guide](https://kind.sigs.k8s.io/docs/user/quick-start/) online. Once you are comfortable with starting/deleting a cluster, return here. This guide assumes you know what Multus and Whereabouts are if you are here. If you're new to either, check out these links first... [Multus](https://github.com/k8snetworkplumbingwg/multus-cni) and [Whereabouts](https://github.com/k8snetworkplumbingwg/whereabouts).
 
-2. Run the `kind-multus-whereabouts.sh` to setup the cluster.
+2. Run `kind-multus-whereabouts.sh <number-of-nodes>` to setup a cluster with `number-of-nodes` nodes.
    
    - check your multus pods are healthy in kube-system namespace
 	
@@ -12,7 +12,7 @@
 		
 		`$ kubectl config set-context --current --namespace=kube-system`
 
-   - if you're in a rush, the quick way to check things are good is that these pods soon start running :)
+   - if you're in a rush, the quick way to check things are good is that these pods soon start running. If they are, you're good to go!
          
          kube-multus-ds-amd64-6fvhz                   1/1     Running             0          18s
          kube-multus-ds-amd64-r2244                   1/1     Running             0          18s
@@ -30,7 +30,7 @@
 	
 		`$ kubectl apply -f cni-install.yml`
 
-   - try to look at multus-cni upstream repo under /e2e for a more up to date version of cni-install.yml, maybe.
+   - try to look at [multus-cni upstream repo](https://github.com/k8snetworkplumbingwg/multus-cni) under `e2e/` for a more up to date version of cni-install.yml, maybe.
 
 4. Check that Whereabouts is working correctly.
 
@@ -62,8 +62,8 @@
 			fs.inotify.max_user_watches = 524288
 			fs.inotify.max_user_instances = 512
 
-3. If you want to access the root of any node, look at noderootpod.yml for steps on how to do it, credit to [this blog](https://raesene.github.io/blog/2019/04/01/The-most-pointless-kubernetes-command-ever/). :)
+3. If you want to access the root of any node, look at `noderootpod.yml` for steps on how to do it, credit to [this blog](https://raesene.github.io/blog/2019/04/01/The-most-pointless-kubernetes-command-ever/). :)
 
 4. Additional credit to [this link](https://gist.github.com/s1061123/c0b857ec1a399c1e174531c0b826a81c), which basically explains how to set up a 3-node environment with KIND that has multus. I based my steps in this readme loosely on it, although it is out of date.
 	
-# Disclaimer: most yml here was not written by me, and can be traced back to k8snetworkplumbingwg. Thanks!
+# Disclaimer: most yaml here can be credited back to k8snetworkplumbingwg.
